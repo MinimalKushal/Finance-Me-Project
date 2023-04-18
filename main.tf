@@ -1,3 +1,9 @@
+provider "aws" {
+  region = "ap-south-1"
+  access_key = "AKIAWYYXEWHSXTGZHMHF"
+  secret_key = "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"
+}
+
 resource "aws_instance" "Finance-Me-Deploy" {
   ami           = "ami-07d3a50bd29811cd1" 
   instance_type = "t2.micro" 
