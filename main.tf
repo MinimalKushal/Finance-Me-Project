@@ -22,7 +22,7 @@ resource "aws_instance" "Finance-Me-Deploy" {
     Name = "Finance Me Deploy"
   }
   provisioner "local-exec" {
-        command = " echo ${aws_instance.Finance-Me-Deploy.public_ip} > inventory "
+        command = " echo ${aws_instance.Finance-Me-Deploy.public_ip} >> inventory.txt "
   }
    provisioner "local-exec" {
   command = "ansible-playbook /var/lib/jenkins/workspace/FinanceMeProject/Playbook.yml "
